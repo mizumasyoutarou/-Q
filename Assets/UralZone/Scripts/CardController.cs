@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CardController : MonoBehaviour
 {
-    public int cnt = 0;
+    public int cardNum = 0;
+    public int effectNum = 0;
     public string card = "";
+    public string effect = "";
     GameObject CardDirector;
     CardBox Box;
     void Start()
@@ -13,7 +15,8 @@ public class CardController : MonoBehaviour
         CardDirector = GameObject.Find("CardDirector");
         Box = CardDirector.GetComponent<CardBox>();
 
-        card = Box.CardName[cnt];
+        card = Box.CardName[cardNum];
+        effect = Box.Effect[effectNum];
     }
 
     // Update is called once per frame
@@ -21,7 +24,17 @@ public class CardController : MonoBehaviour
     {
         //if (Input.GetKeyDown(KeyCode.Return))
         //{
-        //    Destroy(gameObject);
+        //    
         //}
+    }
+    public void CardUse()
+    {
+        Debug.Log("‘I‘ğ‚³‚ê‚Ä‚¢‚Ü‚·");
+        if (Input.GetMouseButtonDown(1))
+        {
+            CardDirector.GetComponent<CardDirector>().cardChoice = false;
+            Debug.Log("‘I‘ğ‚ª‰ğœ‚³‚ê‚Ü‚µ‚½");
+        }
+        
     }
 }
