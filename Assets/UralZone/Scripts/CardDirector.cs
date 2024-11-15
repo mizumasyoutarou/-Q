@@ -62,11 +62,17 @@ public class CardDirector : MonoBehaviour
             clickCard = hit2d.transform.gameObject;
             if (clickCard != null)
             {
+                if (cardSave != null)
+                {
+                    cardSave.GetComponent<CardController>().check = false;
+                }
                 cardSave = clickCard.gameObject;
-                Debug.Log("カードが選ばれています");
+                cardSave.GetComponent<CardController>().check = true;
+                Debug.Log(cardSave.GetComponent<CardController>().check);
             }
             else
             {
+                cardSave = null;
                 Debug.Log("カード未選択です");
             }
         }

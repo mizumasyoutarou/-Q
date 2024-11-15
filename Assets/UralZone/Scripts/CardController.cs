@@ -8,12 +8,15 @@ public class CardController : MonoBehaviour
     public int effectNum = 0;
     public string card = "";
     public string effect = "";
+    public bool check;
+    GameObject clickCheck;
     GameObject CardDirector;
     CardBox Box;
     void Start()
     {
         CardDirector = GameObject.Find("CardDirector");
         Box = CardDirector.GetComponent<CardBox>();
+        clickCheck = transform.Find("ClickCheck").gameObject;
 
         card = Box.CardName[cardNum];
         effect = Box.Effect[effectNum];
@@ -22,13 +25,18 @@ public class CardController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.Return))
-        //{
-        //    
-        //}
+        if (check)
+        {
+            clickCheck.SetActive(true);
+        }
+        else
+        {
+            clickCheck.SetActive(false);
+        }
     }
     public void CardUse()
     {
+        
         Debug.Log("‘I‘ð‚³‚ê‚Ä‚¢‚Ü‚·");
         if (Input.GetMouseButtonDown(1))
         {
