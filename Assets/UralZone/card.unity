@@ -167,6 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Card: {fileID: 4968631619111107452, guid: 8382253b80b511646ac21d0a5066aa1b, type: 3}
   cardSave: {fileID: 0}
+  Player: {fileID: 1359970854}
   cardChoice: 0
 --- !u!114 &835199295
 MonoBehaviour:
@@ -376,6 +377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1359970856}
   - component: {fileID: 1359970855}
+  - component: {fileID: 1359970857}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -450,3 +452,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1359970857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359970854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74c162ed7814c5478c552eda93fd894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plPos: {x: 0, y: 0}
+  Enemy: {fileID: 0}
+  cardNumPC: 5
+  effectNumPC: 3
