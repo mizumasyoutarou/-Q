@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     int plHp;
     const int MAX_HP = 30;
     int power;
+    int defencePower;
+    const int DEFENCE_POWER = 10;
     public int cardNumPC = 5;
     public int effectNumPC = 3;
     bool rangeFlg = false;
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         plHp = MAX_HP;//ƒvƒŒƒCƒ„[‚Ì‘Ì—Í‚ğÅ‘å’l‚É‚·‚é
         power = 5;
+        defencePower = DEFENCE_POWER;
         plPos = transform.position;
     }
 
@@ -37,32 +40,20 @@ public class PlayerController : MonoBehaviour
         {
             case 0:
                 Attack();
-                rangeFlg = false;
-                distanceFlg = false;
                 break;
             case 1:
-                Attack();
-                rangeFlg = true;
-                distanceFlg = false;
+                RangeAttack();
                 break;
             case 2:
-                Attack();
-                distanceFlg = true;
-                rangeFlg = false;
+                DistanceAttack();
                 break;
             case 3:
                 Special();
-                rangeFlg = false;
-                distanceFlg = false;
                 break;
             case 4:
                 Defence();
-                rangeFlg = false;
-                distanceFlg = false;
                 break;
             case 5:
-                rangeFlg = false;
-                distanceFlg = false;
                 break;
         }
     }
@@ -89,19 +80,20 @@ public class PlayerController : MonoBehaviour
     }
     public void Attack()//UŒ‚‚Ìˆ—
     {
-        if (rangeFlg)
-        {
-            Debug.Log("”ÍˆÍUŒ‚€”õ’†");
-        }
-        else if (distanceFlg)
-        {
-            Debug.Log("‰“‹——£UŒ‚€”õ’†");
-        }
-        else if(!rangeFlg && !distanceFlg)
-        {
-            Debug.Log("UŒ‚€”õ’†");
-        }
+        Debug.Log("UŒ‚€”õ’†");
+
     }
+    public void RangeAttack()
+    {
+
+        Debug.Log("”ÍˆÍUŒ‚€”õ’†");
+      
+    }
+    public void DistanceAttack()
+    {
+        Debug.Log("‰“‹——£UŒ‚€”õ’†");
+    }
+
     public void Switch()//“ü‚ê‘Ö‚¦‚Ìˆ—
     {
 
