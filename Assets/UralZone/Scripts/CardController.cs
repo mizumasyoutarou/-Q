@@ -11,6 +11,7 @@ public class CardController : MonoBehaviour
     public bool check;
     public bool cardFlg = default;
     GameObject Player;
+    GameObject GameD;
     GameObject clickCheck;
     GameObject CardDirector;
     CardBox Box;
@@ -19,6 +20,7 @@ public class CardController : MonoBehaviour
     {
         CardDirector = GameObject.Find("CardDirector");
         Player = GameObject.Find("Player");
+        GameD = GameObject.Find("GameDirector");
         Box = CardDirector.GetComponent<CardBox>();
         clickCheck = transform.Find("ClickCheck").gameObject;
 
@@ -40,16 +42,20 @@ public class CardController : MonoBehaviour
     }
     public void CardUse()
     {
-        //PlayerControllerにカードの情報を送る
+        
+        //PlayerControllerとGameDirectorにカードの情報を送る
         if (cnt == 0)
         {
             Player.GetComponent<PlayerController>().cardNumPC = cardNumCC;
             Player.GetComponent<PlayerController>().effectNumPC = effectNumCC;
+            GameD.GetComponent<GameDirector>().
+
             cnt ++;
         }
         Debug.Log("選択されています");
         if (Input.GetMouseButtonDown(1))//選択解除
         {
+            GameDirector.uiFlg = false;
             //PlayerControllerのカードの情報を初期化する
             Player.GetComponent<PlayerController>().cardNumPC = 5;
             Player.GetComponent<PlayerController>().effectNumPC = 3;

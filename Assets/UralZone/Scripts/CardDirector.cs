@@ -33,6 +33,7 @@ public class CardDirector : MonoBehaviour
         //フラグが有効化されたら、プレイヤーにカードの情報を渡すメソッドを起動する
         if (cardChoice)
         {
+            GameDirector.uiFlg = true;
             cardSave.GetComponent<CardController>().CardUse();
         }
         //右クリしたら足りないカードを補充する（仮）
