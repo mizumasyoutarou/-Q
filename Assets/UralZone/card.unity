@@ -503,7 +503,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 835199293}
-  - component: {fileID: 835199294}
   - component: {fileID: 835199295}
   m_Layer: 0
   m_Name: CardDirector
@@ -527,22 +526,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &835199294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835199292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ebf7af530613c4b8457eba3b4cf097, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Card: {fileID: 4968631619111107452, guid: 8382253b80b511646ac21d0a5066aa1b, type: 3}
-  cardSave: {fileID: 0}
-  Player: {fileID: 1359970854}
-  cardChoice: 0
 --- !u!114 &835199295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,7 +1024,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1546879191}
-  - component: {fileID: 1546879192}
   m_Layer: 0
   m_Name: GameDirector
   m_TagString: Untagged
@@ -1064,25 +1046,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1546879192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546879190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5360b5c244a588044a898a11caac998d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 276336778}
-  effectBox: {fileID: 1870784435}
-  cardName: {fileID: 837871720}
-  nonsetting: {fileID: 785540033}
-  cardAbility: {fileID: 352202308}
-  cardEffect: {fileID: 937242195}
-  cardDirector: {fileID: 835199292}
 --- !u!1 &1870784435
 GameObject:
   m_ObjectHideFlags: 0
